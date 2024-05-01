@@ -34,15 +34,10 @@ El proyecto consiste en una aplicación web desarrollada utilizando el patrón M
 
 1. Compila la solución en Visual Studio.
 2. Ejecuta la aplicación.
-3. [Agregar cualquier instrucción adicional sobre cómo usar la aplicación].
-
-## Información Adicional
-
-[Proporciona cualquier información adicional relevante sobre el proyecto, como limitaciones conocidas, problemas conocidos, etc.].
 
 ## Licencia
 
-[Tengo la licencia de la monja que vino a la 314 me bendijo con sus manos].
+Tengo la licencia de la monja que vino a la 314 me bendijo con sus manos.
 
 ## Contacto
 
