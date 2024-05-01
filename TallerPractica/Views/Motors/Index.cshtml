@@ -1,0 +1,47 @@
+﻿@model IEnumerable<TallerPractica.Models.Motor>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Verificar Motor</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TipoMotor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CaballoFuerza)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AnioFabricacion)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TipoMotor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CaballoFuerza)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AnioFabricacion)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdMotor">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.IdMotor">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdMotor">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

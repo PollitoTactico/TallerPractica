@@ -1,0 +1,65 @@
+﻿@model IEnumerable<TallerPractica.Models.Auto>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Matricula)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumPuertas)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Color)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Anio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Propietario)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Motor)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Matricula)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumPuertas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Color)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Anio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Propietario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Motor.IdMotor)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdAuto">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.IdAuto">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdAuto">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
